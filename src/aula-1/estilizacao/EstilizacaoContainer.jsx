@@ -7,7 +7,6 @@ import CssInJsStyle from './cssInJs/CssInJsStyle';
 const EstilizacaoContainer = () => {
     return (
         <div>
-            <h3>Estilização</h3>
             <InlineStyle />
             <InlineStyle2 />
             <ClassStyle />

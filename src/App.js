@@ -1,25 +1,24 @@
 import { useState } from 'react';
 import './App.css';
-import EstadosContainer from './estados/EstadosContainer';
-import EstilizacaoContainer from './estilizacao/EstilizacaoContainer';
+import Aula1Container from './aula-1/Aula1Container';
 
 function App() {
   const paginas = {
-    estilizacao: 'estilizacao',
-    estados: 'estados',
-    formularios: 'formularios'
-  }
+    aula1: 'Aula 1',
+    aula2: 'Aula 2',
+    aula3: 'Aula 3'
+  };
 
   const paginasArr = () => {
     let arr = [];
     for (let pagina in paginas) {
-      arr.push(pagina);
+      arr.push(paginas[pagina]);
     }
     return arr;
-  }
+  };
 
   const [state, setState] = useState({
-    pagina: paginas.estilizacao
+    pagina: paginas.aula1
   });
 
   const mudarPagina = (pagina) => {
@@ -42,8 +41,9 @@ function App() {
         </ul>
       </nav>
       <main>
-        {state.pagina === paginas.estilizacao && <EstilizacaoContainer />}
-        {state.pagina === paginas.estados && <EstadosContainer />}
+        {state.pagina === paginas.aula1 && <Aula1Container />}
+        {state.pagina === paginas.aula2 && <div />}
+        {state.pagina === paginas.aula3 && <div />}
       </main>
     </div>
   );

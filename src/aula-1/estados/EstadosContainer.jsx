@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
-import HooksComponent from './HooksComponent';
-import StatefullComponent from './StatefullComponent';
-import StatelessComponent from './StatelessComponent';
+import HooksComponent from './hooks/HooksComponent';
+import StatefullComponent from './statefull/StatefullComponent';
+import StatelessComponent from './stateless/StatelessComponent';
 
 const EstadosContainer = () => {
     const estados = {
-        statefull: 'statefull',
-        stateless: 'stateless',
-        hooks: 'hooks'
+        statefull: 'Statefull',
+        stateless: 'Stateless',
+        hooks: 'Hooks'
     }
 
     const estadosArr = () => {
         let arr = [];
         for (let estado in estados) {
-            arr.push(estado);
+            arr.push(estados[estado]);
         }
         return arr;
     }
@@ -36,7 +36,6 @@ const EstadosContainer = () => {
 
     return (
         <div>
-            <h3>Estados</h3>
             <nav>
                 <ul>
                     {renderListaEstados()}

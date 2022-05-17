@@ -45,4 +45,5 @@ nav ul li button:hover {
 
 main {
   padding: 5px;
+  background-color: rgba(0, 0, 0, 0.1);
 }
