@@ -11,3 +11,38 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+nav ul {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  gap: 5px;
+}
+
+nav ul li {
+  list-style-type: none;
+  flex: 1;
+}
+
+nav ul li button {
+  width: 100%;
+  border: unset;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  cursor: pointer;
+  transition: all 5ms ease-in-out;
+}
+
+nav ul li button.active {
+  background-color: #3333cc;
+}
+
+nav ul li button:hover {
+  background-color: white;
+  color: black;
+}
+
+main {
+  padding: 5px;
+}
