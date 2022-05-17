@@ -42,8 +42,8 @@ function App() {
       </nav>
       <main>
         {state.pagina === paginas.aula1 && <Aula1Container />}
-        {state.pagina === paginas.aula2 && <div />}
-        {state.pagina === paginas.aula3 && <div />}
+        {state.pagina === paginas.aula2 && <div>TODO</div>}
+        {state.pagina === paginas.aula3 && <div>TODO</div>}
       </main>
     </div>
   );
