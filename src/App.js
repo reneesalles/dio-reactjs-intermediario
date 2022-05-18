@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import Aula1Container from './aula-1/Aula1Container';
 import Aula2Container from './aula-2/Aula2Container';
+import Aula3Container from './aula-3/Aula3Container';
 
 function App() {
   const paginas = {
@@ -44,7 +45,7 @@ function App() {
       <main>
         {state.pagina === paginas.aula1 && <Aula1Container />}
         {state.pagina === paginas.aula2 && <Aula2Container />}
-        {state.pagina === paginas.aula3 && <div>TODO</div>}
+        {state.pagina === paginas.aula3 && <Aula3Container />}
       </main>
     </div>
   );
