@@ -34,7 +34,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div style={{ maxWidth: '600px', margin: '0 auto' }}>
       <nav>
         <ul>
           {renderListaPaginas()}

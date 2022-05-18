@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import EstadosContainer from './estados/EstadosContainer';
-import EstilizacaoContainer from './estilizacao/EstilizacaoContainer';
-import FormularioContainer from './formularios/FormularioContainer';
+import FileInputForm from './components/FileInputForm';
+import NameForm from './components/NameForm';
+import SorveteForm from './components/SorveteForm';
 
-const Aula1Container = () => {
+const FormularioContainer = () => {
     const paginas = {
-        estilizacao: 'Estilização',
-        estados: 'Estados',
-        formularios: 'Formulários'
+        form1: 'Form 1',
+        form2: 'Form 2',
+        form3: 'Form 3'
     };
 
     const paginasArr = () => {
@@ -19,7 +19,7 @@ const Aula1Container = () => {
     };
 
     const [state, setState] = useState({
-        pagina: paginas.estilizacao
+        pagina: paginas.form1
     });
 
     const mudarPagina = (pagina) => {
@@ -33,7 +33,7 @@ const Aula1Container = () => {
     const renderBtnPagina = (pagina) => {
         return <button className={state.pagina === pagina ? 'active' : null} onClick={() => mudarPagina(pagina)}>{pagina}</button>
     };
-
+    
     return (
         <div>
             <nav>
@@ -42,12 +42,12 @@ const Aula1Container = () => {
                 </ul>
             </nav>
             <main>
-                {state.pagina === paginas.estilizacao && <EstilizacaoContainer />}
-                {state.pagina === paginas.estados && <EstadosContainer />}
-                {state.pagina === paginas.formularios && <FormularioContainer />}
+                {state.pagina === paginas.form1 && <NameForm />}
+                {state.pagina === paginas.form2 && <SorveteForm />}
+                {state.pagina === paginas.form3 && <FileInputForm />}
             </main>
         </div>
     );
 };
 
-export default Aula1Container;
+export default FormularioContainer;
