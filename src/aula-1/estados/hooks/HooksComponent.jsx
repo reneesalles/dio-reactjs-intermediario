@@ -19,7 +19,7 @@ const HooksComponent = () => {
         <div>
             <p><b>Lista Hooks (function component com hooks)</b></p>
             <ul>
-                {items.map(item => <li>{item}</li>)}
+                {items.map((item, index) => <li key={`item_${index}`}>{item}</li>)}
             </ul>
             <button onClick={() => addItem('Batata')}>Adicionar Item</button>
             <button onClick={() => removeItem()}>Remover Item</button>

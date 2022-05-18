@@ -35,7 +35,7 @@ class StatefullComponent extends Component {
             <div>
                 <p><b>Lista Statefull (class component)</b></p>
                 <ul>
-                    {items.map(item => <li>{item}</li>)}
+                    {items.map((item, index) => <li key={`item_${index}`}>{item}</li>)}
                 </ul>
                 <button onClick={() => this.addItem('Batata')}>Adicionar Item</button>
                 <button onClick={() => this.removeItem()}>Remover Item</button>

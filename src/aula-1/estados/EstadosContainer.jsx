@@ -27,7 +27,7 @@ const EstadosContainer = () => {
     };
 
     const renderListaEstados = () => {
-        return estadosArr().map(estado => <li>{renderBtnEstado(estado)}</li>);
+        return estadosArr().map((estado, index) => <li key={`estado_${index}`}>{renderBtnEstado(estado)}</li>);
     };
 
     const renderBtnEstado = (estado) => {

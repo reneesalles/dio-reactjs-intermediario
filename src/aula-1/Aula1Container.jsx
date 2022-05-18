@@ -27,7 +27,7 @@ const Aula1Container = () => {
     };
 
     const renderListaPaginas = () => {
-        return paginasArr().map(pagina => <li>{renderBtnPagina(pagina)}</li>);
+        return paginasArr().map((pagina, index) => <li key={`aula_1_pagina_${index}`}>{renderBtnPagina(pagina)}</li>);
     };
 
     const renderBtnPagina = (pagina) => {

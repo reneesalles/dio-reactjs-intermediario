@@ -27,7 +27,7 @@ const FormularioContainer = () => {
     };
 
     const renderListaPaginas = () => {
-        return paginasArr().map(pagina => <li>{renderBtnPagina(pagina)}</li>);
+        return paginasArr().map((pagina, index) => <li key={`form_${index}`}>{renderBtnPagina(pagina)}</li>);
     };
 
     const renderBtnPagina = (pagina) => {

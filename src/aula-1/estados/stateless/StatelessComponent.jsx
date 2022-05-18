@@ -5,7 +5,7 @@ const StatelessComponent = ({ items }) => {
         <div>
             <p><b>Lista Stateless (function component)</b></p>
             <ul>
-                {items.map(item => <li>{item}</li>)}
+                {items.map((item, index) => <li key={`item_${index}`}>{item}</li>)}
             </ul>
         </div>
     );
